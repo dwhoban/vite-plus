@@ -2,6 +2,7 @@ use crate::{
     exec::{Exec, ensure_env},
     payload::{EncodedPayload, PAYLOAD_ENV_NAME},
 };
+use bstr::ByteSlice;
 use phf::{Set, phf_set};
 use std::{
     convert::Infallible,
@@ -32,7 +33,14 @@ pub fn handle_exec(
     let injectable = if let (Some(parent), Some(file_name)) =
         (program_path.parent(), program_path.file_name())
     {
-        if matches!(parent.as_os_str().as_bytes(), b"/bin" | b"/usr/bin") {
+        // Exclude Chrome and Chromium-based browsers
+        if file_name.as_bytes().windows(6).any(|w| w == b"Chrome" || w == b"chrome")
+            || file_name.as_bytes().windows(8).any(|w| w == b"Chromium" || w == b"chromium")
+            || command.program.contains_str("Google Chrome")
+            || command.program.contains_str("Chromium")
+        {
+            false
+        } else if matches!(parent.as_os_str().as_bytes(), b"/bin" | b"/usr/bin") {
             let fixtures = &encoded_payload.payload.fixtures;
             if matches!(file_name.as_bytes(), b"sh" | b"bash") {
                 command.program = fixtures.bash_path.as_bytes().into();
