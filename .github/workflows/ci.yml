@@ -43,7 +43,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - uses: oxc-project/setup-rust@cd82e1efec7fef815e2c23d296756f31c7cdc03d # v1.0.0
+      - uses: oxc-project/setup-rust@d286d43bc1f606abbd98096666ff8be68c8d5f57 # v1.0.0
         with:
           save-cache: ${{ github.ref_name == 'main' }}
           cache-key: test
@@ -62,7 +62,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - uses: oxc-project/setup-rust@cd82e1efec7fef815e2c23d296756f31c7cdc03d # v1.0.0
+      - uses: oxc-project/setup-rust@d286d43bc1f606abbd98096666ff8be68c8d5f57 # v1.0.0
         with:
           save-cache: ${{ github.ref_name == 'main' }}
           cache-key: lint
@@ -85,7 +85,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - uses: oxc-project/setup-rust@cd82e1efec7fef815e2c23d296756f31c7cdc03d # v1.0.0
+      - uses: oxc-project/setup-rust@d286d43bc1f606abbd98096666ff8be68c8d5f57 # v1.0.0
         with:
           save-cache: ${{ github.ref_name == 'main' }}
           cache-key: run
@@ -117,7 +117,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - uses: oxc-project/setup-rust@cd82e1efec7fef815e2c23d296756f31c7cdc03d # v1.0.0
+      - uses: oxc-project/setup-rust@d286d43bc1f606abbd98096666ff8be68c8d5f57 # v1.0.0
         with:
           save-cache: ${{ github.ref_name == 'main' }}
           cache-key: cli-e2e-test
@@ -145,7 +145,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - uses: oxc-project/setup-rust@cd82e1efec7fef815e2c23d296756f31c7cdc03d # v1.0.0
+      - uses: oxc-project/setup-rust@d286d43bc1f606abbd98096666ff8be68c8d5f57 # v1.0.0
         with:
           save-cache: ${{ github.ref_name == 'main' }}
           cache-key: install-e2e-test
