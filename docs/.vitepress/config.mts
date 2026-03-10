@@ -707,6 +707,7 @@ export default extendConfig(
       socialLinks: [
         { icon: 'github', link: 'https://github.com/voidzero-dev/vite-plus' },
         { icon: 'x', link: 'https://x.com/voidzerodev' },
+        { icon: 'discord', link: 'https://discord.gg/cC6TEVFKSx' },
         { icon: 'bluesky', link: 'https://bsky.app/profile/voidzero.dev' },
       ],
 

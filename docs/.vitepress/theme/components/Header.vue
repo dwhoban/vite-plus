@@ -260,15 +260,6 @@ onUnmounted(() => {
                 <Icon icon="simple-icons:github" aria-label="GitHub" class="size-5 text-white" />
               </a>
               <a
-                href="https://bsky.app/profile/voidzero.dev"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="hover:opacity-70 transition-opacity"
-                @click="closeMobileMenu"
-              >
-                <Icon icon="simple-icons:bluesky" aria-label="Bluesky" class="size-5 text-white" />
-              </a>
-              <a
                 href="https://x.com/voidzerodev"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -276,6 +267,24 @@ onUnmounted(() => {
                 @click="closeMobileMenu"
               >
                 <Icon icon="simple-icons:x" aria-label="X" class="size-5 text-white" />
+              </a>
+              <a
+                href="https://discord.gg/cC6TEVFKSx"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:opacity-70 transition-opacity"
+                @click="closeMobileMenu"
+              >
+                <Icon icon="simple-icons:discord" aria-label="Discord" class="size-5 text-white" />
+              </a>
+              <a
+                href="https://bsky.app/profile/voidzero.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:opacity-70 transition-opacity"
+                @click="closeMobileMenu"
+              >
+                <Icon icon="simple-icons:bluesky" aria-label="Bluesky" class="size-5 text-white" />
               </a>
             </div>
           </div>
